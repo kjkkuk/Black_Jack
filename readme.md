@@ -2,29 +2,16 @@
 
 https://en.wikipedia.org/wiki/Blackjack
 
-## Need to implement BlackJack Console game using ruby.
+https://ru.wikipedia.org/wiki/%D0%9E%D1%87%D0%BA%D0%BE_(%D0%B8%D0%B3%D1%80%D0%B0)
 
-### Plan:
-1. On game start we should ask user to provide his name and store it
-1. При запуске игры мы должны попросить пользователя указать свое имя и сохранить его.
+### This is an implementation of Blackjack in Ruby with the following house rules:
 
-2. Then ask to press any key to start the game
-2. Затем попросите нажать любую клавишу, чтобы запустить игру.
+User and computer get 2 cards each.The value of cards two through ten is their pip value (2 through 10). Face cards (Jack, Queen, and King) are all worth ten.The ace is worth 11. A points is the sum of the card values. Players are allowed to draw additional cards to improve their score. When user stop taking new cards and his score is less than 21, computer takes cards one by one (max is 17).
 
-3. User and computer get 2 cards each
-3. Пользователь и компьютер получают по 2 карты.
+The detailed outcome of the hand follows:
 
-4. System asks user if he wants to take one more card (cycle)
-4. Система спрашивает пользователя, хочет ли он взять еще одну карту (цикл)
-
-5. WHen user stop taking new cards and his score <= 21, computer logic takes cards one by one (max is determined by CONSTANT)
-5. Когда пользователь перестает брать новые карты и его оценка <= 21, компьютерная логика берет карты одну за другой
-(максимальное значение определяется КОНСТАНТОЙ).
-
-6. Showing results and asking user about new game.
-6. Отображение результатов и вопрос пользователя о новой игре.
-
-puts "\u2664" пика
-puts "\u2661" червы
-puts "\u2667" крести
-puts "\u2662" бубны
+* If the player is dealt an Ace and a ten-value card (called a "blackjack" ), and the computer does not, the player wins and usually receives a bonus.
+* If the player exceeds a sum of 21, the player loses, even if the computer also exceeds 21.
+* If the computer exceeds 21 and the player does not, the player wins.
+* If the player attains a final sum higher than the dealer and does not bust, the player wins.
+* If both dealer and player receive a blackjack or any other hands with the same sum, no one wins.
